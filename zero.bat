@@ -7,18 +7,27 @@ if "%~1" equ "create" (
 		set filename=%~3
 		if defined filename (
 			echo. > %~3
-			echo Filename: %filename%
+			echo File %~3 Created
 		)
 	)
 	if "%~2" equ "-d" (
 		set filename=%~3
 		if defined filename (
 			mkdir %~3
-			echo dir: %filename%
+			echo Directory %~3 Created
 		)
 	)		
 )
-
+if "%~1" equ "delete" (
+    if "%~2" equ "-f" (
+        del %~3
+        echo File %~3 Delete
+    )
+    if "%~2" equ "-d" (
+        rmdir %~3
+        echo Directory %~3 Deleted
+    )
+)
 
 
 

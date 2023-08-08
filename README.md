@@ -27,14 +27,15 @@ The `zero` command should run in the background, and you can use it from any dir
 Please note that if you make any changes to the `zero.bat` script, you'll need to restart any command prompt windows for the changes to take effect.
 
 ## Usage
-
+```
 zero create -f <filename>
-
+```
 
 Creates a file with the specified `<filename>` in the current directory.
-
+```
 zero create -d <directory>
-livecodeserver
+```
+
 
 
 Creates a directory with the specified `<directory>` name in the current directory.

@@ -1,6 +1,7 @@
 # Zero
 
 The "zero" batch script is a utility that allows you to create files and directories in the Windows command prompt.
+Zero is a command line utility written in batch script that allows you to create, delete, and rename files and directories. It provides a simple and straightforward way to perform these operations using command line arguments.
 
 ## Running Zero Script in the Background
 
@@ -40,23 +41,62 @@ zero create -d <directory>
 
 Creates a directory with the specified `<directory>` name in the current directory.
 
+
+To use Zero, open the command prompt and navigate to the directory where the script is located. Then, you can run the script with the following command format:
+```
+zero <command> <option> <target>
+```
+Replace `<command>`, `<option>`, and `<target>` with the appropriate values based on the operation you want to perform.
+
+## Commands
+
+Zero supports the following commands:
+
+    create: Creates a new file or directory.
+    delete: Deletes an existing file or directory.
+    rename: Renames an existing file or directory.
+
+## Options
+
+The available options depend on the command used:
+
+    For the create command:
+        -f: Creates a file with the specified name.
+        -d: Creates a directory with the specified name.
+
+    For the delete command:
+        -f: Deletes the specified file.
+        -d: Deletes the specified directory.
+
+    For the rename command:
+        No specific options are available.
+
 ## Examples
-
-To create a file named "app.py" in the current directory:
-
-zero create -f app.py
-
-
-To create a directory named "my_directory" in the current directory:
-
-zero create -d my_directory
-applescript
-
 
 Please ensure that you have added the directory containing the "zero" batch script to your system's PATH variable. This will allow you to execute the script from any directory in the command prompt.
 
 Note: The script assumes that you have appropriate permissions to create files and directories in the current directory.
 
-## License
 
-This script is released under the [MIT License](LICENSE).
+Create a file named "example.txt":
+```
+zero create -f example.txt
+```
+Create a directory named "mydir":
+```
+zero create -d mydir
+```
+Delete a file named "oldfile.txt":
+```
+zero delete -f oldfile.txt
+```
+Delete a directory named "mydir":
+```
+zero delete -d mydir
+```
+Rename a file from "oldfile.txt" to "newfile.txt":
+```
+zero rename oldfile.txt to newfile.txt
+```
+## License
+Zero is released under the [MIT License](LICENSE). Feel free to modify and distribute it according to the terms of the license.
